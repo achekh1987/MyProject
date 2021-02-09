@@ -60,42 +60,6 @@
      state: absent
     notify: Reload Apache
 
-  # MySQL Configuration
-  #- name: Set the root password
-  #  mysql_user:
-  #   name: root
-  #   password: "{{ mysql_root_password }}"
-  #   host: localhost
-  #   host_all: yes 
-  #   login_unix_socket: /var/run/mysqld/mysqld.sock
-  #   state: present
-  #  tags: [ mysql, mysql-root ]
-
-  #- name: Remove all anonymous user accounts
-  #  mysql_user:
-  #   name: ''
-  #   host_all: yes
-  #   state: absent
-  #   login_user: root
-  #   login_password: "{{ mysql_root_password }}"
-  #  tags: [ mysql ]
-
-  #- name: Remove all anonymous user accounts
-  #  mysql_user:
-  #   name: ''
-  #   host_all: yes
-  #   state: absent
-  #   login_user: root
-  #   login_password: "{{ mysql_root_password }}"
-  #  tags: [ mysql ]
-
-
-  #- name: delete anonymous MySQL server user for localhost
-  #  action: mysql_user user="" state="absent"
-
-  #- name: remove the MySQL test database
-  #  action: mysql_db db=test state=absent
-
   - name: Creates database for WordPress
     mysql_db:
      name: "{{ mysql_db }}"
@@ -113,13 +77,6 @@
      login_user: root
      login_password: "{{ mysql_root_password }}"
     tags: [ mysql ]
-
-  # UFW Configuration
-  #- name: "UFW - Allow HTTP on port {{ http_port }}"
-  #  ufw:
-  #   rule: allow
-  #   port: '80'
-  #   proto: tcp
 
   # WordPress Configuration
   - name: Download and unpack latest WordPress
