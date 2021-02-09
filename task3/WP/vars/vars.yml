@@ -1,0 +1,13 @@
+#Setings
+php_modules: [ 'php-curl', 'php-gd', 'php-mbstring', 'php-xml', 'php-xmlrpc', 'php-soap', 'php-intl', 'php-zip' ]
+
+#MySQL
+mysql_root_password: "mysql_root_password"
+mysql_db: wdb
+mysql_user: wpu
+mysql_password: wppas
+
+#HTTP
+http_host: wordpress.local
+http_conf: wordpress.local
+http_port: 80

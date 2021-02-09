@@ -1,0 +1,10 @@
+---
+- name: Install NGINX
+  hosts: WEB
+  become: yes
+  
+  tasks:
+  - name: Istall NGINX
+    apt: name=nginx state=latest
+  - name: Start Web Server
+    service: name=nginx state=started enabled=yes

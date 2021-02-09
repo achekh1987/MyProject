@@ -1,0 +1,2 @@
+[APP]
+Wordpress ansible_host=10.0.32.2
