@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:latest
 ENV TZ=Europe/Kiev
 ENV DEVOPS="Alex Chekh"
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
