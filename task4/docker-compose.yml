@@ -1,0 +1,14 @@
+version: '3'
+services:
+ jenkins:
+  image: "jenkinsci/blueocean"
+  container_name: "docker"
+  volumes:
+  - ./jenkins_home/:/var/jenkins_home
+  - /var/run/docker.sock:/var/run/docker.sock:rw
+  - /usr/bin/docker:/usr/bin/docker
+  network_mode: jenkins
+  ports:
+   - 50000:50000
+   - 8080:8080
+  restart: always

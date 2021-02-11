@@ -1,0 +1,14 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2021-02-11 10:26:04.300 UTC</timestamp>
+  <md5sum>d6ef65600e855fe7d18b6e16112f931b</md5sum>
+  <fileName>Credential id=c567f74d-24bc-437c-a71a-fcbe5971336e name=root/******</fileName>
+  <usages/>
+  <facets>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.3.15">
+      <timestamp>1613040665111</timestamp>
+      <nodeName>Docker</nodeName>
+      <timestamp0>1613040627667</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+  </facets>
+</fingerprint>
