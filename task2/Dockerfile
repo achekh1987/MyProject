@@ -1,8 +1,13 @@
-FROM ubuntu
-ENV TZ=Europe/Kiev
-ENV DEVOPS="Alex Chekh"
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
-	    &&apt-get update && apt-get install -y apache2
-EXPOSE 80
-RUN echo $DEVOPS > /var/www/html/index.html  
-CMD apachectl -D FOREGROUND
+FROM ubuntu:12.04
+
+RUN apt-get update
+RUN apt-get install -y apache2
+
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+ENV DEVOPS Alex Chekh
+RUN echo $DEVOPS > /var/www/index.html
+
+ENTRYPOINT ["/usr/sbin/apache2"]
+CMD ["-D", "FOREGROUND"]
