@@ -1,8 +1,0 @@
-Started by user [8mha:////4GRbTz4gqqYKS0IJBbHjUdGlO+bXo089rVJzRamFqzdKAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL9xOSM1OwMAF6XaUnBAAAA[0machekh
-Running as SYSTEM
-Building in workspace /var/jenkins_home/workspace/ps
-[ps] $ /bin/sh -xe /tmp/jenkins5558211921012848600.sh
-+ docker ps -a
-CONTAINER ID   IMAGE                 COMMAND                  CREATED             STATUS             PORTS                                              NAMES
-8cb96d7b702f   jenkinsci/blueocean   "/sbin/tini -- /usr/…"   About an hour ago   Up About an hour   0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   docker
-Finished: SUCCESS
