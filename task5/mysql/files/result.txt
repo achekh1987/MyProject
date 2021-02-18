@@ -1,0 +1,18 @@
+1,pass,pass,pass,pass
+2,pass,pass,pass, 
+3,pass,pass,pass,pass
+4,pass,pass,not passed, 
+5,pass,pass,not passed,
+6,pass,pass,not passed, 
+7,pass,not passed,not passed, 	
+8,pass,pass,pass,pass
+9,pass,not passed,not passed, 
+10,pass,pass,pass,pass
+11,pass,pass,pass,pass
+12,pass,pass,pass,pass
+12,pass,not passed,not passed, 
+14,pass,pass,pass,pass
+16,pass,not passed,not passed, 
+17,pass,pass,pass, 
+18,pass,pass,pass,pass
+19,pass,pass,pass,pass

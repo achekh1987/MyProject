@@ -1,0 +1,42 @@
+version: '3'
+services:
+  master-mongo:
+    image: mongo
+    container_name: master-mongo
+    hostname: master-mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: ASDqwe123
+    ports:
+      - 27017:27017
+    network_mode: jenkins
+    restart: always
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0" ]
+    volumes:
+      - /home/Exadel/MyProject/MyProject/task5/mongodb/db_data:/data/db
+  slave-mongo:
+    image: mongo
+    container_name: slave-mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: ASDqwe123
+    ports:
+      - 27018:27017
+    network_mode: jenkins
+    restart: always
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0" ]
+    volumes:
+      - /home/Exadel/MyProject/MyProject/task5/mongodb/db_slave:/data/db
+  slave2-mongo:
+    image: mongo
+    container_name: slave2-mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: ASDqwe123
+    ports:
+      - 27019:27017
+    network_mode: jenkins
+    restart: always
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0" ]
+    volumes:
+      - /home/Exadel/MyProject/MyProject/task5/mongodb/db_slave2:/data/db
