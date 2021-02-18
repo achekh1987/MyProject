@@ -2,13 +2,7 @@
 1.	Собираем образ из Dockerfile.
 2.	С помощью docker-compose.yml подымаем два контейнера mysql и slave.
 3.	Создаем базу данных и с помощью утилиты HeidiSQL создаем таблицы и наполняем их данными. 
- 
-        
-
-
-
-
-
+ ![alt text](MyProject/task5/creata_db_mysql2.png "Описание будет тут")
 4.	С помощью запроса 
 SELECT Student, Task1, Task2, Task3, Task4 FROM Result, Students WHERE Result.id=16 AND Students.id = 16 выводим информацию по студенту 
  
